@@ -1,0 +1,136 @@
+/* استايل عام */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* الشريط العلوي */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* القسم الترحيبي */
+.hero {
+    position: relative;
+    height: 400px;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* طبقة تعتيم */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero span {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* زر احترافي */
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #e6b800;
+}
+
+/* قسم من نحن */
+.about {
+    padding: 50px;
+    background: white;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #222;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* تحسين ظهور النصوص */
+h2, p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* إضافة تأثيرات عند تمرير الصفحة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2, .hero p, .btn {
+    animation: fadeIn 1s ease-in-out;
+}
